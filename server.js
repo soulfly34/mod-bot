@@ -102,7 +102,7 @@ client.on('message', async(message) => {
        db.add(`xxPornohub.${message.author.id}`, 1);
 	   message.delete()
 	 if(db.get(`xxPornohub.${message.author.id}`) >= 5){
-    db.push(`${message.author.id}_sicil`, `Text kanallarında reklam sebebiyle **Süresiz** mutelendi  `)  
+    db.push(`${message.author.id}_sicil`, `yazı kanalında 5 reklamı aştığı için mute. `)  
     return message.member.roles.add(client.confing.muteRoles)
 	}
   }
@@ -116,8 +116,8 @@ client.on('message', async(message) => {
     db.add(`xxPornohubx.${message.author.id}`, 1);
 	   message.delete()
 	 if(db.get(`xxPornohubx.${message.author.id}`) >= 5){
-    db.push(`${message.author.id}_sicil`, `Text kanallarında küfür sebebiyle **Süresiz** mutelendi.`)  
-    return message.member.roles.add(client.confing.muteRoles)
+    db.push(`${message.author.id}_sicil`, `yazı kanalında 5 küfür aştığı için mute.`)  
+          return message.member.roles.add(client.confing.muteRoles)
 
 	} 
   }
